@@ -9,7 +9,7 @@ let's start sow :
 if you don't have to to download it from here : https://nodejs.org/en/download/ .
 
 
-2-after that you have to install angular cli in order to run front end part of this project:npm install --save @angular/cli@latest 
+2-after that you have to install angular cli in order to run front end part of this project : npm install -g @angular/cli
 
 
 3-this awesome ! next step is mango db go to https://cloud.mongodb.com/ sign up if you don't have an account , it's free :p don't worry 

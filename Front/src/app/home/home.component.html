@@ -1,0 +1,84 @@
+<body>
+  <div id="wrapper">
+   <h1>Card List</h1>
+   
+   <table id="keywords" cellspacing="0" cellpadding="0">
+     <thead>
+       <tr>
+         <th><span>Account Number</span></th>
+         <th><span>Account RIB</span></th>
+         <th><span>Creation Date</span></th>
+         <th><span>Amount </span></th>
+         <th><span>Card type</span></th>
+         <th><span>exp Date </span></th>
+         <th><span>Options </span></th>
+         
+
+       </tr>
+     </thead>
+     <tbody>
+       <tr  *ngFor="let elt of cards" >
+         <td class="lalign">{{elt.account_number}}</td>
+         <td>{{elt.account_RIB}}</td>
+         <td>{{elt.creation_date}}</td>
+         <td>{{elt.amount}}</td>
+         <td>{{elt.card_type}}</td>
+         <td>{{elt.Date_exp}}</td>
+         <td>
+          <button type="button" (click)="delete(elt._id)" class="btn btn-danger"> Delete </button> &nbsp;
+          <button type="button" (click)="update(elt)" class="btn btn-warning"> Update </button>
+        </td>
+
+        
+       </tr>
+      
+     </tbody>
+   </table>
+  </div> 
+
+<div class="container">  
+  <form id="contact" action="" method="post">
+    <h3>Add New Card</h3>
+    <h4>Welcome to the mean stack application !! </h4>
+    <fieldset>
+      <input placeholder="Account Number" name="account_number" type="text" tabindex="1" [(ngModel)]="account_number" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Account Password" name="account_Password" type="email" tabindex="2" required [(ngModel)]="account_Password">
+    </fieldset>
+    <fieldset>
+      <input placeholder="Account RIB" type="text"  name="account_RIB" [(ngModel)]="account_RIB" required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Creation Date" type="Date" name="account_RIB" [(ngModel)]="date_creation"  required>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Amount" type="text"  name="amount" [(ngModel)]="amount" required>
+    </fieldset>
+    <fieldset>
+  <select [(ngModel)]="card_type" name="card_type">
+      <option value="e-dinar">E-dinar</option>
+      <option value="mastercard">Master Card</option>
+      <option value="payonner">Payonner</option>
+  </select>
+    </fieldset>
+    <fieldset>
+          <input placeholder="Date exp"  name="Date_exp" [(ngModel)]="Date_exp" type="Date"  required>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" (click)="submit()" data-submit="...Sending">Submit</button>
+    </fieldset>
+    <fieldset>
+      <button name="update" type="submit" id="contact-submit" (click)="editCard()"  data-submit="...Sending" style="background-color: sandybrown;">Update</button>
+    </fieldset>
+
+  </form>
+</div>
+ </body>
+
+
+
+  <script>
+  $(function(){
+  $('#keywords').tablesorter(); 
+});</script>

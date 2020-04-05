@@ -34,7 +34,11 @@ if you don't have to to download it from here : https://nodejs.org/en/download/ 
 
 
 10 - all you need now is to run front and back end servers ! to do that you have to run : 
+
+
   -ng serve  // on the Front directory
+
+
   -npm start // on the MEAN STACK CRUD directory 
 
 and its all , i hope it's beneficial for you guys . all the best   
